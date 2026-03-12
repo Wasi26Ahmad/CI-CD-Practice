@@ -31,7 +31,15 @@ pipeline:
                   identifier: Run_1
                   spec:
                     shell: Sh
-                    command: python3 -m unittest discover
+                    command: |-
+                      # Navigate to the Cypress tests directory
+                      cd services/cypress/tests
+
+                      # Install Cypress and dependencies (if not already installed)
+                      npm install
+
+                      # Run Cypress tests
+                      npx cypress run
   properties:
     ci:
       codebase:
