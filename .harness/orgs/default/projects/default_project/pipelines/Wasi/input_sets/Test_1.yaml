@@ -1,0 +1,14 @@
+inputSet:
+  name: Test_1
+  identifier: Test_1
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Wasi
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
